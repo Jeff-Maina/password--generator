@@ -1,0 +1,230 @@
+/* colors */
+/* #9eefae icons */
+/* #111017 body */
+/* #24232b component */
+/* #5352a password color */
+@font-face {
+    font-family: space-mono;
+    src: url("./fonts/SpaceMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: space-mono-bold;
+    src: url("./fonts/SpaceMono-Bold.ttf");
+}
+
+:root{
+    --icons-color: #9eefae;
+    --body-color: #111017;
+    --text-color: rgb(202, 202, 202);
+    --component-color: #24232b;
+    --password-color: #53525a;
+}
+
+body{
+    font-family: space-mono;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-color);
+}
+
+main{
+    width: 30%;
+    height: 40em;
+    min-width: 400px;
+    margin: auto;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+#password{
+    width: 100%;
+    height: 5em;
+    background-color: var(--component-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+
+#component{
+    width: 100%;
+    height: 30em;
+    background-color: var(--component-color);
+    margin-top: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5em;
+}
+
+#char-length{
+    /* background-color:white ; */
+    display: flex;
+    color: var(--text-color);
+    position: relative;
+}
+
+/* typography */
+h2{
+    text-align: center;
+    color: var(--text-color);
+}
+
+#password h4{
+    padding-top: .4em;
+    /* background-color: #9eefae; */
+    width: 75%;
+    height: 2em;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--password-color);
+}
+
+i{
+  cursor: pointer;
+  color: var(--icons-color);
+}
+
+#char-length h3:nth-child(2){
+    position: absolute;
+    margin: 0;
+    right: 2em;
+    top: 15px;
+    font-size: 1.5rem;
+    color: var(--icons-color);
+}
+
+li h4{
+    position: absolute;
+    left: 2em;
+    color: var(--text-color);
+    margin: 0;
+}
+
+#strength-container h3{
+    color: var(--password-color);
+    position: absolute;
+    left: 1em;
+}
+
+/* components */
+
+/* custom range */
+input[type="range"]{
+    margin-top: 1em;
+    -webkit-appearance: none;
+    width: 90%;
+    height: 1px;
+    background: var(--text-color);
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}
+
+input[type="range"]:focus{
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    cursor: grab;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--icons-color);
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+  }
+
+  ul{
+    padding: 0;
+    /* background-color: #555; */
+    list-style-type: none;
+  }
+
+  li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5em;
+  }
+
+  input[type="checkbox"]{
+ cursor: pointer;
+}
+
+  #strength-container{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 90%;
+    height: 3.5em;
+    margin-top: 1em;
+    background-color: var(--body-color);
+  }
+
+  #bar1,#bar2,#bar3,#bar4{
+    height: 70%;
+    margin-right: .5em;
+    width: 3%;
+    border: 1px solid var(--icons-color);
+  }
+
+  .active{
+    border: 1px solid yellow !important;
+    background-color: yellow;
+  }
+
+ #generate-btn{
+    cursor: pointer;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid var(--icons-color);
+    margin-top: 1em;
+    color: var(--icons-color);
+    font-family: space-mono-bold;
+    font-size: 1.3rem;
+    padding: .6em;
+ }
+
+ #generate-btn i{
+    font-size: 1rem;
+    font-weight: 900;
+    opacity: 0;
+    position: relative;
+    left: .1em;
+    transition: .5s;
+ }
+
+ #generate-btn:hover{
+    color: var(--component-color);
+    background-color: var(--icons-color);
+ }
+
+ #generate-btn:hover i{
+    opacity: 1;
+    left: 1em;
+    color: var(--component-color);
+ }
+
+ #generate-btn:active i{
+    opacity: 1;
+    left: 4em;
+    color: var(--component-color);
+ }
+
+ .attribution{
+    position:absolute;
+    right: 3em;
+    color: var(--text-color);
+ }
+
+ .attribution a{
+    color: var(--icons-color);
+    text-decoration: underline;
+    cursor: pointer;
+ }

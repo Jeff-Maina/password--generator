@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password generator</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+
+    <main>
+        <h2>password generator</h2>
+       <div id="password">
+        <h4 id="generated-password"></h4>
+        <i onclick="copyToClipboard()" id="copy-icon" class="material-symbols-outlined">content_copy</i>
+       </div>
+       <div id="component">
+        <span id="char-length"><h3>Character length</h3><h3 id="chars-set" >4</h3></span>
+        <input id="range" type = "range" min="0" max="16" value="4"/>
+        <ul>
+            <li>
+                <input id="uppercase" onchange="validateStrength('uppercase')" type="checkbox" value="uppercase"> <h4>Include Uppercase letters</h4>
+            </li>
+            <li>
+                <input id="lowercase" onchange="validateStrength('lowercase')" type="checkbox"> <h4>Include Lowercase letters</h4>
+            </li>
+            <li>
+                <input id="number" onchange="validateStrength('numbers')" type="checkbox"> <h4>Include Numbers</h4>
+            </li>
+            <li>
+                <input id="symbols" onchange="validateStrength('symbols')" type="checkbox"> <h4>Include Symbols</h4>
+            </li>
+        </ul>
+        <div id="strength-container">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+            <div id="bar4" class="bar"></div>
+            <h3>Strength</h3>
+        </div>
+        <button onclick="updateStrength()" id="generate-btn">GENERATE <i class="material-symbols-outlined">arrow_forward</i></button>
+       </div>
+    </main>
+    <h4 class="attribution">Coded by <a href="https://github.com/Jeff-Maina" target="_blank">Jeff</a></h4>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
